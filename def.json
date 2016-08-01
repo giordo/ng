@@ -1,0 +1,187 @@
+{
+  "saved": false,
+  "type" : "quote",
+  "version": "%%timestamp",
+  "valute": "EUR",
+  "container": "tpl_main_quote_container",
+  "template": "tpl_quote",
+  "default-fields":[
+    {
+      "type": "field",
+      "name": "quote_total",
+      "container": "quote_total",
+      "field-type": "input-text-readable",
+      "field-data-type": "valute",
+      "field-value": "sum(this|tabs|tab_total)",
+      "custom-value": "0"
+    }],
+  "custom-fields":[],
+  "tabs":[
+    {
+      "type": "tab",
+      "template": "tpl_tab_container",
+      "container": "tpl_quote_tabs",
+      "print": true,
+      "bp": true,
+      "calculate": true,
+      "custom-fields":[],
+      "rows":[
+        {
+          "type":"row",
+          "subtype": "product",
+          "version": "1",
+          "print": true,
+          "bp": false,
+          "calculate": true,
+          "present": false,
+          "template": "tpl_product_row",
+          "container": "tpl_tab_rows",
+          "needed-fields":[],
+          "default-fields":[
+            {
+              "type":"field",
+              "name": "row_qty",
+              "container": "row_qty",
+              "field-type": "input-text",
+              "field-data-type":"int",
+              "field-rules": [],
+              "field-default-value": "0"
+            },
+            {
+              "type": "field",
+              "name": "row_price_original",
+              "container": "row_price_original",
+              "field-type": "input-hidden",
+              "field-data-type": "valute",
+              "scope": "this",
+              "field-default-value": "0"
+            },
+            {
+              "type": "field",
+              "name": "row_price",
+              "container": "row_price",
+              "field-type": "input-text",
+              "field-data-type": "valute",
+              "scope": "this",
+              "field-default-value": "0"
+            },
+            {
+              "type":"field",
+              "name": "row_total",
+              "container": "row_total",
+              "field-type": "input-text-readable",
+              "field-data-type": "valute",
+              "field-rules": [],
+              "field-value": "sum(this|elements|element_total)",
+              "field-default-value": "0"
+            },
+            {
+              "type": "field",
+              "name": "row_discount1",
+              "container": "row_discount1",
+              "field-type": "input-text",
+              "field-data-type": "percentage",
+              "scope": "this",
+              "field-default-value": "0"
+            },
+            {
+              "type": "field",
+              "name": "row_discount2",
+              "container": "row_discount2",
+              "field-type": "input-text",
+              "field-data-type": "percentage",
+              "scope": "this",
+              "field-default-value": "0"
+            }
+          ],
+          "custom-fields":[
+            {
+              "type":"field",
+              "name": "row_l",
+              "container": "row_l",
+              "field-type": "input-text",
+              "field-data-type":"int",
+              "field-rules": [],
+              "field-default-value": "0"
+            },
+            {
+              "type":"field",
+              "name": "row_h",
+              "container": "row_h",
+              "field-type": "input-text",
+              "field-data-type":"int",
+              "field-rules": [],
+              "field-default-value": "0"
+            },
+            {
+              "type":"field",
+              "name": "row_mq",
+              "container": "row_mq",
+              "field-type": "input-hidden",
+              "field-data-type":"int",
+              "field-rules": [],
+              "field-default-value": "0"
+            }
+          ],
+          "elements":[
+            {
+              "type":"element",
+              "print": true,
+              "bp": false,
+              "calculate": true,
+              "template": "tpl_element",
+              "rule-to-sum": "show", //show/hide/present. show mostra e include nel calcolo; hide: non mostra ma include nel calcolo; present: mostra come omaggio
+              "default-fields":[
+                {
+                  "type": "field",
+                  "name": "element_category",
+                  "container": "element_category",
+                  "field-type": "input-hidden",
+                  "field-data-type": "text",
+                  "scope": "this",
+                  "field-default-value": "ALL"
+                },
+                {
+                  "type": "field",
+                  "name": "element_code",
+                  "container": "element_code",
+                  "field-type": "input-text",
+                  "field-data-type": "text",
+                  "scope": "this",
+                  "field-default-value": ""
+                },
+                {
+                  "type": "field",
+                  "name": "element_description",
+                  "container": "element_description",
+                  "field-type": "input-textarea",
+                  "field-data-type": "textarea",
+                  "scope": "this",
+                  "field-default-value": "Descrizione"
+                },
+                {
+                  "type": "field",
+                  "name": "element_price_original",
+                  "container": "element_price_original",
+                  "field-type": "input-hidden",
+                  "field-data-type": "valute",
+                  "scope": "this",
+                  "field-default-value": "0"
+                },
+                {
+                  "type": "field",
+                  "name": "element_price",
+                  "container": "element_price",
+                  "field-type": "input-text",
+                  "field-data-type": "valute",
+                  "scope": "this",
+                  "field-default-value": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

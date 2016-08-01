@@ -1,0 +1,82 @@
+{
+    "type": "quote",
+    "quote_total_original_readable": "0.00",
+    "quote_total_readable": "0.00",
+    "quote_extra_discount1": "0",
+    "quote_extra_discount2": "0",
+    "custom_fields": [
+      {
+        "type": "field",
+        "name": "tabsCount",
+        "container": "tabsCount",
+        "field_type": "input_label",
+        "field_data_type": "int",
+        "field_target": "quote",
+        "field_method": "count",
+        "field_method_count_arg": "tab"
+        }
+    ],
+    "tabs": [
+      {
+        "title": "uno",
+        "description": "prova descrizione va descrizione va descrizione va descrizioneva descrizione",
+        "type": "tab",
+        "template": "tpl_tab_container",
+        "container": "tpl_quote_tabs",
+        "print": true,
+        "bp": true,
+        "calculate": true,
+        "tab_total_original_readable": "0.00",
+        "tab_total_readable": "0.00",
+        "tab_extra_discount1": "0",
+        "tab_extra_discount2": "0",
+        "images": [
+          {
+            "path": "http://placehold.it/50x50/00ff00",
+            "title": "img2prova",
+            "print": true
+          }
+        ],
+        "custom_fields": [],
+        "needed_fields": [
+          {
+            "type": "field",
+            "name": "tabsCount",
+            "container": "tabsCount",
+            "field_type": "input_label",
+            "field_data_type": "int",
+            "field_target": "quote",
+            "field_method": "length",
+            "field_filter": "tab",
+            "field_default_value": "0",
+            "filed_value": null
+          }
+        ],
+        "rows": []
+      },
+      {
+        "title": "due",
+        "description": "prova descrizione va descrizione va descrizione va descrizioneva descrizione",
+        "type": "tab",
+        "template": "tpl_tab_container",
+        "container": "tpl_quote_tabs",
+        "print": true,
+        "bp": true,
+        "calculate": true,
+        "tab_total_original": "0.00",
+        "tab_total_readable": "0.00",
+        "tab_extra_discount1": "0",
+        "tab_extra_discount2": "0",
+        "images": [
+          {
+            "path": "http://placehold.it/50x50/ff0000",
+            "title": "img1prova",
+            "print": true
+          }
+        ],
+        "custom_fields": [],
+        "needed_fields": [],
+        "rows": []
+      }
+    ]
+  }

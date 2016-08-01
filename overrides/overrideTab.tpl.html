@@ -1,0 +1,6 @@
+<li ng-class="{active: active, disabled: disabled}" ng-model="$parent.tab">
+    <span ng-click="$parent.toggleIco($parent.tab, 'print')" ng-class="{tabicoActive: $parent.tab.print}" class="glyphicon glyphicon-print tabico tabico1" aria-hidden="true"></span>
+    <span ng-click="$parent.toggleIco($parent.tab, 'bp')" ng-class="{tabicoActive: $parent.tab.bp}"    class="glyphicon glyphicon-retweet tabico tabico2" aria-hidden="true"></span>
+    <span ng-click="$parent.toggleIco($parent.tab, 'calculate')"  ng-class="{tabicoActive: $parent.tab.calculate}"   class="glyphicon glyphicon-usd tabico tabico3" aria-hidden="true"></span>
+    <a ng-click="select()" tab-heading-transclude>{{heading}}</a><span class="close-heading"><i class="icon-remove-sign"></i></span>
+</li>

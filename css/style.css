@@ -1,0 +1,154 @@
+.tabico{
+    position:absolute;
+    padding: 6px;
+    margin-top:-35px;
+    border-radius: 15%;
+    background-color: #f8f8f8;
+    color: #cccccc;
+    top: inherit;
+}
+li:not(.active) .tabico{
+    margin-top: -22px;
+    padding: 3px;
+}
+.tabico:hover{
+    background-color: #e8e8e8;
+}
+.tabico1 {
+    margin-left: 0px;
+}
+.tabico2 {
+    margin-left: 30px;
+}
+.tabico3 {
+    margin-left: 60px;
+}
+.tabico4 {
+    margin-left: 90px;
+}
+
+ul.nav-tabs li{
+    width:150px;
+}
+
+ul.nav-tabs li.gi{
+    width:60px;
+}
+
+li.gi span {
+    display: none;
+}
+.tabicoActive{
+    background-color: #aaaaaa;
+    color: #f8f8f8;
+}
+.tab-form{
+    width: 100%;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    color: #cdcdcd;
+}
+.tab-form-desc{
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 10px;
+    margin-bottom:10px;
+    border-bottom: 1px solid #ddd;
+}
+.nav{
+    margin-bottom: 0px;
+}
+.nav-tabs>li{
+    margin-top:40px;
+    border-bottom: 1px solid #ddd;
+}
+.nav-tabs>li a{
+    overflow: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.nav-tabs li.active {
+    border-bottom: 1px solid #ffffff;
+    background-color: #ffffff;
+}
+.nav-tabs li:not(.active) a{
+    background-color: #efefef;
+}
+.nav-tabs li:last-of-type{
+    border: 0px;
+}
+.nav-tabs li:last-of-type a{
+    background-color: #ffffff;
+    padding-bottom: 0px;
+    width: 150px;
+    border:0px;
+}
+.nav-tabs li:last-of-type a:hover{
+    background-color: #ffffff;
+    border:0px;
+}
+.nav-tabs li:active{
+    background-color: #737373;
+}
+.nav-tabs li a:active{
+    color: #ffffff;
+}
+
+.tab-content{
+    padding: 12px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+span.close-heading{
+    display: none;
+}
+li.active span.close-heading{
+    display: block;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 132px;
+}
+.tab-imagerows{
+    float: left;
+}
+
+.tooltip {
+    width: 210px;
+    background: #0193cf;
+    color: #ff0000;
+    position: relative;
+    top: -13px;
+    left: 0px;
+    z-index: 9999;
+    padding: 10px 5px;
+    border-radius: 13px;
+    font-weight:bold;
+}
+.tooltip:before {
+    content: "\f0d8";
+    font-family: FontAwesome;
+    position: absolute;
+    top: -15px;
+    left: 19px;
+    color: #0193cf;
+    font-size: 22px;
+}
+.main {
+    width:20%;
+    height:100px;
+    margin-left:35%;
+    background-color:#eeeeef;
+    margin-top:10%;
+    padding:100px;
+}
+.text {
+    color:blue;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+}

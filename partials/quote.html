@@ -1,0 +1,47 @@
+<div ng-controller="TabsParentController">
+    <!-- <input type="text" ng-model="quote.custom_fields[0].name"/> -->
+    <custom-field ng-repeat="cf in quote.custom_fields" content="cf"></custom-field>
+        <tabset sortable="quote.tabs">
+            <tab ng-repeat="tab in quote.tabs"
+                 heading={{checkEmptyString(tab.title)}}
+                 active=tab.active
+                 sortable-item="$index"
+                 ng-controller="aaa">
+                <div ng-controller="TabsChildController">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <label>titolo</label>
+                            <input type="text" ng-model="tab.title"/>
+                            <input type="text" ng-model="tab.tab_total_readable"/>
+                        </div>
+                        <div class="col-xs-3">
+                            <label>descrizione</label>
+                            <div class="tab-form tab-form-desc">{{tab.description}}</div>
+                        </div>
+                        <div class="col-xs-2">
+                            <label>immagini ({{tab.images.length}})</label>
+                            <pre>{{tab.images | json}}</pre>
+                        </div>
+                        <div class="col-xs-2">
+                            custom-fields  ({{tab.custom-fields.length}})</label>
+                            <pre>{{tab.custom-fields | json}}</pre>
+                        </div>
+                        <div class="col-xs-2">
+                            needed-fields  ({{tab.custom-fields.length}})</label>
+                            <pre>{{tab.needed-fields | json}}</pre>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-mini btn-primary"><i class="icon-plus icon-white"></i>&nbsp;riga</button>
+                </div>
+        </tab>
+        <tab class="gi" select="addNewTab()">
+            <tab-heading>
+                <button  class="btn-primary btn-mini"><i class="icon-plus icon-white"></i>&nbsp;scheda</button>
+            </tab-heading>
+        </tab>
+    </tabset>
+
+    <pre>{{quote | json}}</pre>
+</div>
