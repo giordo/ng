@@ -46,7 +46,7 @@ app.factory("services", ['$http', function($http) {
 	};
 
     obj.getQuotes =  function(){
-        return $http.get('def2.json?1');
+        return $http.get('def2.json?2');
     }
 
     return obj;
