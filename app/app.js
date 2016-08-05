@@ -46,7 +46,7 @@ app.factory("services", ['$http', function($http) {
 	};
 
     obj.getQuotes =  function(){
-        return $http.get('def2.json?2');
+        return $http.get('def.json?' + Date.now());
     }
 
     return obj;
@@ -171,6 +171,24 @@ app.factory('TemplateService', function ($http) {
         getTemplates: getTemplates
     };
 });
+
+app.directive('toggleShow', [function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.addClass("hide");
+            bt = angular.element('<button class="btn btn-mini">'+attrs.name+'</span>');
+
+            bt.on('click', function(){
+                element.toggleClass('show');
+            });
+            element.on('click', function(){
+                element.toggleClass('show');
+            });
+            element.after(bt);
+        }
+    };
+}]);
 
 app.directive('customField', function ($rootScope, $compile, TemplateService) {
 

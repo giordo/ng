@@ -12,23 +12,24 @@
                         <div class="col-xs-3">
                             <label>titolo</label>
                             <input type="text" ng-model="tab.title"/>
-                            <input type="text" ng-model="tab.tab_total_readable"/>
-                        </div>
+                            <label>total readable</label>
+                            <span>{{ tab.tab_total_readable | currency }}</span>
+                            </div>
                         <div class="col-xs-3">
                             <label>descrizione</label>
                             <div class="tab-form tab-form-desc">{{tab.description}}</div>
                         </div>
                         <div class="col-xs-2">
                             <label>immagini ({{tab.images.length}})</label>
-                            <pre>{{tab.images | json}}</pre>
+                            <pre name="tabImages"  toggle-show>{{tab.images | json}}</pre>
                         </div>
                         <div class="col-xs-2">
                             custom-fields  ({{tab.custom-fields.length}})</label>
-                            <pre>{{tab.custom-fields | json}}</pre>
+                            <pre name="tabCustomFields" toggle-show>{{tab.custom-fields | json}}</pre>
                         </div>
                         <div class="col-xs-2">
                             needed-fields  ({{tab.custom-fields.length}})</label>
-                            <pre>{{tab.needed-fields | json}}</pre>
+                            <pre name="tabNeededFields" toggle-show>{{tab.needed-fields | json}}</pre>
                         </div>
                     </div>
                 </div>
@@ -38,10 +39,9 @@
         </tab>
         <tab class="gi" select="addNewTab()">
             <tab-heading>
-                <button  class="btn-primary btn-mini"><i class="icon-plus icon-white"></i>&nbsp;scheda</button>
+                <button class="btn-primary btn-mini"><i class="icon-plus icon-white"></i>&nbsp;scheda</button>
             </tab-heading>
         </tab>
     </tabset>
-
-    <pre>{{quote | json}}</pre>
+    <pre name="quoteJson" toggle-show>{{quote | json}}</pre>
 </div>
